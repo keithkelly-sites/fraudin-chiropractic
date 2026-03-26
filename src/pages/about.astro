@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import drGeorge from '../assets/images/dr-george.jpg';
+import drBen from '../assets/images/dr-ben.jpg';
+---
+<Layout title="About | Fraudin Advanced Chiropractic & Rehab" description="Meet Dr. George and Dr. Benjamin Fraudin. Father-son chiropractic practice in Pittsburgh since 1982. University of Pittsburgh, Duquesne, New York Chiropractic College.">
+  <section class="page-hero"><div class="container">
+    <span class="label reveal">About</span>
+    <h1 class="ph__title reveal">The Fraudin <em>family.</em></h1>
+    <p class="ph__sub reveal reveal--delay-1">Two generations of chiropractors. Same commitment to getting you back to what you love.</p>
+  </div></section>
+
+  <section class="doc section"><div class="container"><div class="doc__layout">
+    <div class="doc__image reveal"><Image src={drGeorge} alt="Dr. George Fraudin" loading="lazy" width={450} height={560} layout="constrained" /></div>
+    <div class="doc__content">
+      <span class="label reveal">Founder</span>
+      <h2 class="reveal">Dr. George Fraudin</h2>
+      <p class="reveal reveal--delay-1">Dr. Fraudin was born and raised in the South Hills of Pittsburgh. He did his undergraduate work at the University of Pittsburgh and then completed his chiropractic studies at New York Chiropractic College.</p>
+      <p class="reveal reveal--delay-2">He opened his doors in 1982, moving into the current Boyce Road location in 1988. Board certified in rehabilitation, Dr. George brings over four decades of hands-on experience to every patient he treats.</p>
+    </div>
+  </div></div></section>
+
+  <section class="doc doc--alt section"><div class="container"><div class="doc__layout doc__layout--reverse">
+    <div class="doc__image reveal"><Image src={drBen} alt="Dr. Benjamin Fraudin" loading="lazy" width={450} height={560} layout="constrained" /></div>
+    <div class="doc__content">
+      <span class="label reveal">Associate</span>
+      <h2 class="reveal">Dr. Benjamin Fraudin</h2>
+      <p class="reveal reveal--delay-1">Dr. Ben has been with the practice since 2014. He's a graduate of New York Chiropractic College and holds a Bachelor's Degree in Biology from Duquesne University.</p>
+      <p class="reveal reveal--delay-2">A chiropractic patient his entire life, Dr. Ben received his first adjustment shortly after being born. He believes chiropractic care is the safest and most effective method to help others stay healthy and mobile for their entire lives.</p>
+    </div>
+  </div></div></section>
+
+  <section class="section" style="padding-bottom: var(--space-2xl); text-align: center;"><div class="container">
+    <h2 class="reveal" style="font-size: var(--font-size-2xl); margin-bottom: var(--space-md);">Schedule with us.</h2>
+    <a href="tel:4122578090" class="btn btn--primary reveal reveal--delay-1">Call 412-257-8090</a>
+  </div></section>
+</Layout>
+<style>
+  .page-hero { padding: var(--space-2xl) 0 var(--space-xl); border-bottom: 1px solid var(--color-border); background: var(--color-bg-warm); }
+  .ph__title { font-size: var(--font-size-3xl); margin-top: var(--space-sm); margin-bottom: var(--space-md); }
+  .ph__title em { color: var(--color-accent); font-style: italic; }
+  .ph__sub { font-size: var(--font-size-md); color: var(--color-text-muted); max-width: 50ch; line-height: 1.6; }
+  .doc--alt { background: var(--color-bg-warm); }
+  .doc__layout { display: grid; grid-template-columns: 1fr; gap: var(--space-xl); align-items: start; }
+  @media (min-width: 768px) { .doc__layout { grid-template-columns: 1fr 1.5fr; gap: var(--space-2xl); } .doc__layout--reverse { grid-template-columns: 1.5fr 1fr; } .doc__layout--reverse .doc__image { order: 2; } }
+  .doc__image img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; border-radius: var(--radius-lg); }
+  .doc__content h2 { font-size: var(--font-size-xl); color: var(--color-accent); margin-top: var(--space-sm); margin-bottom: var(--space-md); }
+  .doc__content p { color: var(--color-text-muted); line-height: 1.75; margin-bottom: var(--space-md); }
+</style>

@@ -1,0 +1,159 @@
+---
+/* Design: application/ld+json in Layout. Light warm bg, blue accent. Father-son practice.
+   Doctor portraits are the centerpiece. 40+ years, 20K patients, board certified. */
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import drGeorge from '../assets/images/dr-george.jpg';
+import drBen from '../assets/images/dr-ben.jpg';
+import officeImg from '../assets/images/office.jpg';
+---
+<Layout title="Fraudin Advanced Chiropractic & Rehab | Pittsburgh, PA">
+
+  <section class="hero">
+    <div class="container">
+      <span class="label reveal">Pittsburgh, PA &middot; Since 1982</span>
+      <h1 class="hero__title reveal">Advanced chiropractic<br/><em>& rehabilitation.</em></h1>
+      <p class="hero__sub reveal reveal--delay-1">
+        Father-son practice with over 40 years of experience. Board certified
+        in rehabilitation. General chiropractic, sports medicine, and specialized care.
+      </p>
+      <div class="hero__actions reveal reveal--delay-2">
+        <a href="tel:4122578090" class="btn btn--primary">Call 412-257-8090</a>
+        <a href="/services" class="btn btn--outline">View services</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stats__grid">
+      <div class="stat reveal"><span class="stat__num">40+</span><span class="stat__label">years of<br/>experience</span></div>
+      <div class="stat reveal reveal--delay-1"><span class="stat__num">20K+</span><span class="stat__label">happy<br/>patients</span></div>
+      <div class="stat reveal reveal--delay-2"><span class="stat__num">2</span><span class="stat__label">generations<br/>of care</span></div>
+    </div>
+  </section>
+
+  <section class="doctors section">
+    <div class="container">
+      <span class="label reveal">Meet the doctors</span>
+      <h2 class="doctors__heading reveal">Two generations.<br/><em>One mission.</em></h2>
+      <div class="doctors__grid">
+        <div class="doctor-card reveal">
+          <div class="doctor-card__image"><Image src={drGeorge} alt="Dr. George Fraudin — chiropractor since 1982" loading="lazy" width={400} height={500} layout="constrained" /></div>
+          <div class="doctor-card__content">
+            <h3>Dr. George Fraudin</h3>
+            <p class="doctor-card__subtitle">Founder &middot; Since 1982</p>
+            <p>Born and raised in the South Hills. University of Pittsburgh undergrad, New York Chiropractic College graduate. Board certified in rehabilitation. Opened the practice in 1982 and has been helping patients get back to doing what they love ever since.</p>
+          </div>
+        </div>
+        <div class="doctor-card reveal reveal--delay-1">
+          <div class="doctor-card__image"><Image src={drBen} alt="Dr. Benjamin Fraudin — chiropractor since 2014" loading="lazy" width={400} height={500} layout="constrained" /></div>
+          <div class="doctor-card__content">
+            <h3>Dr. Benjamin Fraudin</h3>
+            <p class="doctor-card__subtitle">Associate &middot; Since 2014</p>
+            <p>Duquesne University biology graduate, New York Chiropractic College. A chiropractic patient his entire life, Dr. Ben believes chiropractic care is the safest and most effective method to help others stay healthy and mobile for their entire lives.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-preview section">
+    <div class="container">
+      <span class="label reveal">What we treat</span>
+      <h2 class="reveal">Specialized <em>care.</em></h2>
+      <div class="svc-grid">
+        <div class="svc-card reveal"><h3>General Chiropractic</h3><p>Manual manipulation for back pain, neck pain, and extremity issues. Each patient examined individually.</p></div>
+        <div class="svc-card reveal reveal--delay-1"><h3>Sports Medicine</h3><p>Holistic treatment of sports injuries. Multiple techniques to get athletes back to peak performance.</p></div>
+        <div class="svc-card reveal reveal--delay-2"><h3>Rehabilitation</h3><p>Board-certified rehab specialists. Therapeutic exercises and targeted recovery programs.</p></div>
+        <div class="svc-card reveal reveal--delay-1"><h3>Pregnancy Care</h3><p>Safe, gentle chiropractic care throughout pregnancy to reduce discomfort and support healthy delivery.</p></div>
+        <div class="svc-card reveal reveal--delay-2"><h3>Accident & Injury</h3><p>Auto accident, work injury, and whiplash treatment. Documentation for insurance claims.</p></div>
+      </div>
+      <a href="/services" class="btn btn--outline reveal" style="margin-top: var(--space-lg);">All services</a>
+    </div>
+  </section>
+
+  <section class="testimonials section">
+    <div class="container">
+      <span class="label reveal" style="color: oklch(0.7 0.08 250);">Patient stories</span>
+      <h2 class="reveal" style="color: #fff;">What patients <em>say.</em></h2>
+      <div class="testimonials__grid">
+        <blockquote class="testimonial reveal"><p>"I highly recommend this office. All the Drs are great. After just a few visits, I already feel better. The staff couldn't be any nicer!! 5 Star experience for sure!!!"</p><cite>Babs Porter</cite></blockquote>
+        <blockquote class="testimonial reveal reveal--delay-1"><p>"Never disappointed with the care you get at Fraudin Chiropractic. All the staff are super nice and the treatments I get are very effective for me. Fraudin is the best I have been to."</p><cite>Gary Evans</cite></blockquote>
+        <blockquote class="testimonial reveal reveal--delay-2"><p>"I've been a patient at Fraudin for 20 years. From my children when they were young through my own personal care. This is a family oriented office that truly cares about your well being."</p><cite>Wes Howard</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="office section">
+    <div class="container">
+      <div class="office__layout reveal">
+        <Image src={officeImg} alt="Fraudin Advanced Chiropractic & Rehab office building on Boyce Road" loading="lazy" width={800} height={500} layout="constrained" class="office__img" />
+        <div class="office__overlay">
+          <span class="label">Our office</span>
+          <p>1030 Boyce Road, Pittsburgh PA 15241. Serving the South Hills community.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta section">
+    <div class="container" style="text-align: center;">
+      <h2 class="reveal" style="font-size: var(--font-size-2xl); margin-bottom: var(--space-md);">Ready to feel better?</h2>
+      <p class="reveal reveal--delay-1" style="color: var(--color-text-muted); max-width: 40ch; margin-inline: auto; margin-bottom: var(--space-lg);">Call to schedule your appointment. New patients always welcome.</p>
+      <a href="tel:4122578090" class="btn btn--primary reveal reveal--delay-2">Call 412-257-8090</a>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .hero { padding: var(--space-2xl) 0 var(--space-xl); background: var(--color-bg-warm); border-bottom: 1px solid var(--color-border); }
+  .hero__title { font-size: var(--font-size-hero); margin-top: var(--space-sm); margin-bottom: var(--space-lg); letter-spacing: -0.02em; }
+  .hero__title em { color: var(--color-accent); font-style: italic; }
+  .hero__sub { font-size: var(--font-size-md); color: var(--color-text-muted); max-width: 50ch; margin-bottom: var(--space-lg); line-height: 1.6; }
+  .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
+
+  .stats { border-bottom: 1px solid var(--color-border); }
+  .stats__grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .stat { padding: var(--space-lg) var(--gutter); text-align: center; border-right: 1px solid var(--color-border); }
+  .stat:last-child { border-right: none; }
+  .stat__num { display: block; font-family: var(--font-display); font-size: var(--font-size-2xl); font-weight: 700; color: var(--color-accent); line-height: 1; }
+  .stat__label { display: block; font-size: var(--font-size-xs); color: var(--color-text-muted); margin-top: var(--space-xs); text-transform: uppercase; letter-spacing: 0.06em; line-height: 1.4; }
+  @media (max-width: 600px) { .stats__grid { grid-template-columns: 1fr; } .stat { border-right: none; border-bottom: 1px solid var(--color-border); } .stat:last-child { border-bottom: none; } }
+
+  .doctors__heading { font-size: var(--font-size-2xl); margin-top: var(--space-sm); margin-bottom: var(--space-xl); }
+  .doctors__heading em { color: var(--color-accent); font-style: italic; }
+  .doctors__grid { display: grid; grid-template-columns: 1fr; gap: var(--space-lg); }
+  @media (min-width: 768px) { .doctors__grid { grid-template-columns: 1fr 1fr; } }
+
+  .doctor-card { background: var(--color-bg-white); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; }
+  .doctor-card__image img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; }
+  .doctor-card__content { padding: var(--space-lg); }
+  .doctor-card__content h3 { font-size: var(--font-size-lg); color: var(--color-accent); margin-bottom: var(--space-xs); }
+  .doctor-card__subtitle { font-size: var(--font-size-xs); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-faint); margin-bottom: var(--space-md); }
+  .doctor-card__content p:last-child { font-size: var(--font-size-sm); color: var(--color-text-muted); line-height: 1.75; }
+
+  .services-preview { background: var(--color-bg-warm); }
+  .services-preview h2 { font-size: var(--font-size-2xl); margin-top: var(--space-sm); margin-bottom: var(--space-xl); }
+  .services-preview h2 em { color: var(--color-accent); font-style: italic; }
+  .svc-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-md); }
+  @media (min-width: 600px) { .svc-grid { grid-template-columns: 1fr 1fr; } }
+  .svc-card { padding: var(--space-lg); background: var(--color-bg-white); border: 1px solid var(--color-border); border-radius: var(--radius-lg); }
+  .svc-card h3 { font-family: var(--font-body); font-size: var(--font-size-base); font-weight: 700; color: var(--color-accent); margin-bottom: var(--space-sm); }
+  .svc-card p { font-size: var(--font-size-sm); color: var(--color-text-muted); line-height: 1.7; }
+
+  .testimonials { background: var(--color-bg-blue); color: var(--color-text-light); }
+  .testimonials h2 { font-size: var(--font-size-2xl); margin-top: var(--space-sm); margin-bottom: var(--space-xl); }
+  .testimonials h2 em { color: oklch(0.7 0.08 250); font-style: italic; }
+  .testimonials__grid { display: grid; grid-template-columns: 1fr; gap: var(--space-md); }
+  @media (min-width: 768px) { .testimonials__grid { grid-template-columns: repeat(3, 1fr); } }
+  .testimonial { padding: var(--space-lg); background: oklch(0.2 0.03 240); border: 1px solid var(--color-border-blue); border-radius: var(--radius-lg); display: flex; flex-direction: column; justify-content: space-between; }
+  .testimonial p { font-size: var(--font-size-sm); color: var(--color-text-light-muted); line-height: 1.75; font-style: italic; margin-bottom: var(--space-lg); }
+  .testimonial cite { font-style: normal; font-weight: 600; font-size: var(--font-size-sm); color: #fff; }
+
+  .office__layout { position: relative; border-radius: var(--radius-xl); overflow: hidden; }
+  .office__img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+  .office__overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: var(--space-lg); background: linear-gradient(to top, oklch(0.12 0.02 240 / 0.9), transparent); }
+  .office__overlay .label { color: oklch(0.7 0.08 250); }
+  .office__overlay p { color: oklch(0.85 0.01 60); font-size: var(--font-size-sm); margin-top: var(--space-xs); }
+</style>

@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Services | Fraudin Advanced Chiropractic & Rehab" description="General chiropractic, sports medicine, rehabilitation, pregnancy care, and accident & injury treatment in Pittsburgh, PA. Board certified.">
+  <section class="page-hero"><div class="container">
+    <span class="label reveal">Services</span>
+    <h1 class="ph__title reveal">What we <em>treat.</em></h1>
+    <p class="ph__sub reveal reveal--delay-1">Five specialized areas of care, each tailored to your specific condition. Board-certified rehabilitation specialists.</p>
+  </div></section>
+
+  <section class="svc section"><div class="container"><h2 class="svc__title reveal">General Chiropractic</h2><p class="reveal reveal--delay-1">Our General Chiropractic services seek to alleviate back pain, neck pain, and extremity issues. We examine each individual patient to determine the most appropriate method of manual manipulation. Every treatment plan is personalized.</p></div></section>
+  <section class="svc svc--alt section"><div class="container"><h2 class="svc__title reveal">Sports Medicine</h2><p class="reveal reveal--delay-1">We take a holistic approach to treating sports injuries, employing multiple techniques to get athletes back to peak performance. From weekend warriors to competitive athletes, we understand the demands sport places on the body.</p></div></section>
+  <section class="svc section"><div class="container"><h2 class="svc__title reveal">Rehabilitation</h2><p class="reveal reveal--delay-1">Dr. George Fraudin is board certified in rehabilitation. Our therapeutic exercise programs and targeted recovery protocols address the root cause of pain, not just the symptoms. We rebuild strength and function.</p></div></section>
+  <section class="svc svc--alt section"><div class="container"><h2 class="svc__title reveal">Pregnancy Care</h2><p class="reveal reveal--delay-1">Safe, gentle chiropractic care throughout pregnancy. Our techniques reduce back pain, improve alignment, and support a healthier, more comfortable pregnancy and delivery.</p></div></section>
+  <section class="svc section"><div class="container"><h2 class="svc__title reveal">Accident & Injury</h2><p class="reveal reveal--delay-1">Auto accidents, work injuries, whiplash, and personal injury cases. We provide thorough documentation for insurance claims and work with you through the entire recovery process.</p></div></section>
+
+  <section class="conditions section"><div class="container">
+    <span class="label reveal">Conditions</span>
+    <h2 class="reveal" style="margin-top: var(--space-sm); margin-bottom: var(--space-lg);">Common conditions we <em style="color: var(--color-accent); font-style: italic;">treat.</em></h2>
+    <div class="conditions__tags reveal reveal--delay-1">
+      <span>Low back pain</span><span>Headaches & migraines</span><span>Whiplash</span>
+      <span>Neck pain</span><span>Joint pain</span><span>Carpal tunnel</span>
+      <span>Sciatica</span><span>Pregnancy discomfort</span>
+    </div>
+  </div></section>
+
+  <section class="section" style="padding-bottom: var(--space-2xl); text-align: center;"><div class="container">
+    <h2 class="reveal" style="font-size: var(--font-size-2xl); margin-bottom: var(--space-md);">Schedule your visit.</h2>
+    <a href="tel:4122578090" class="btn btn--primary reveal reveal--delay-1">Call 412-257-8090</a>
+  </div></section>
+</Layout>
+<style>
+  .page-hero { padding: var(--space-2xl) 0 var(--space-xl); border-bottom: 1px solid var(--color-border); background: var(--color-bg-warm); }
+  .ph__title { font-size: var(--font-size-3xl); margin-top: var(--space-sm); margin-bottom: var(--space-md); }
+  .ph__title em { color: var(--color-accent); font-style: italic; }
+  .ph__sub { font-size: var(--font-size-md); color: var(--color-text-muted); max-width: 52ch; line-height: 1.6; }
+  .svc--alt { background: var(--color-bg-warm); }
+  .svc__title { font-size: var(--font-size-xl); font-style: italic; color: var(--color-accent); margin-bottom: var(--space-md); }
+  .svc p { color: var(--color-text-muted); line-height: 1.75; max-width: 55ch; }
+  .conditions { background: var(--color-bg-warm); }
+  .conditions__tags { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
+  .conditions__tags span { padding: 0.5em 1.2em; font-size: var(--font-size-sm); color: var(--color-text-muted); border: 1px solid var(--color-border); border-radius: 100px; background: var(--color-bg-white); }
+</style>
